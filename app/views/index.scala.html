@@ -1,0 +1,16 @@
+@(tweets: List[Tweets])
+
+@helper.form(action=routes.Application.index()){
+    <span>Informe os perfis ou hashtags separados pro vírgula (,)</span>
+    <br>
+    <input type="text" name="values" id="inputID" size="50">
+    <input type="submit">
+}
+
+<div id="contentID" style="background-color: #F4F4F4; min-height: 100px; min-width: 100px;">
+    <ul>
+        @for(tweet <- tweets) {
+            <li>@tweet.getName() : (@tweet.getText())</li>
+        }
+    </ul>
+</div>
