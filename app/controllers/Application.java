@@ -30,6 +30,10 @@ public class Application extends Controller {
     }
 
     public static ArrayList<Tweets> getProfiles(String values) {
+        if (values == null) {
+            return new ArrayList<Tweets>();
+        }
+
         String[] valuesArray = values.split(",");
 
         ArrayList<Tweets> contents = new ArrayList<Tweets>();
@@ -87,5 +91,6 @@ public class Application extends Controller {
         }
 
         return contents;
+
     }
 }
