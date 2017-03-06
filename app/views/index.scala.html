@@ -2,6 +2,12 @@
 
 @(tweets: List[Tweets])
 
+<html>
+<head>
+    <title>Twitter Bruno</title>
+</head>
+
+<body>
 @form(action=routes.Application.index()){
 <span>Informe os perfis ou hashtags separados pro vírgula (,)</span>
 <br>
@@ -16,3 +22,5 @@
         }
     </ul>
 </div>
+</body>
+</html>
